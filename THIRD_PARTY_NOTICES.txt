@@ -1,0 +1,20 @@
+Voice Clipper - Third Party Notices
+
+FFmpeg and FFprobe 8.0.1 essentials Windows x64 build, by gyan.dev
+Copyright (c) the FFmpeg developers and contributing library authors.
+This build is licensed under GPL version 3. It runs as a separate process.
+Full license and original build README (including configuration) are in tools/.
+Build provider: https://www.gyan.dev/ffmpeg/builds/
+FFmpeg source revision: https://github.com/FFmpeg/FFmpeg/commit/894da5ca7d
+Upstream source: https://ffmpeg.org/download.html
+The original README lists the libraries and build details. When redistributing
+these binaries, provide the corresponding source for FFmpeg AND its linked
+libraries under their applicable licenses. This local build includes attribution
+and licenses; it is not a public source-code distribution service.
+
+Electron: MIT, Copyright Electron contributors.
+Chromium and other bundled components: see LICENSE.electron.txt and
+LICENSES.chromium.html alongside the executable.
+React, React DOM, scheduler: MIT, Copyright Meta Platforms, Inc. and affiliates.
+Lucide: ISC, Copyright Lucide Contributors; portions derived from Feather (MIT).
+Runtime dependency license texts are in tools/DEPENDENCY_LICENSES.txt.

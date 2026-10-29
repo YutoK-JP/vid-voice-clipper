@@ -1,0 +1,21 @@
+{
+  "name": "voice-clipper", "version": "1.0.0", "private": true,
+  "description": "タイムラインで動画・音声から音声を切り抜くWindowsアプリ",
+  "author": "Voice Clipper", "main": "dist-electron/main.js",
+  "scripts": {
+    "build": "tsc --noEmit && vite build && node scripts/build.mjs",
+    "start": "npm run build && electron .",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "package": "npm run build && node scripts/prepare-tools.mjs && electron-builder --win --x64 --dir",
+    "test:desktop": "node scripts/desktop-test.mjs"
+  },
+  "dependencies": { "react": "^19.2.0", "react-dom": "^19.2.0", "lucide-react": "^0.468.0" },
+  "devDependencies": { "@types/node": "^24.0.0", "@types/react": "^19.0.0", "@types/react-dom": "^19.0.0", "electron": "^42.0.0", "electron-builder": "^26.0.0", "esbuild": "^0.25.0", "typescript": "^5.9.0", "vite": "^7.0.0", "tsx": "^4.20.0", "playwright": "^1.56.0" },
+  "build": {
+    "appId": "jp.local.voiceclipper", "productName": "Voice Clipper",
+    "directories": { "output": "release" },
+    "files": ["dist/**/*", "dist-electron/**/*", "package.json"],
+    "extraResources": [{ "from": "resources/tools", "to": "tools" }, { "from": "THIRD_PARTY_NOTICES.txt", "to": "THIRD_PARTY_NOTICES.txt" }],
+    "win": { "target": "dir", "signAndEditExecutable": false }
+  }
+}
